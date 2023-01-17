@@ -27,7 +27,6 @@ public class ControladorBeanPersona {
         } else if (bean.equalsIgnoreCase("segundoBean")) {
             return segundaPersona;
         } else if (bean.equalsIgnoreCase("terceroBean")) {
-            
             return terceraPersona;
         }
         return null;
