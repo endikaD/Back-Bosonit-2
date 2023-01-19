@@ -11,7 +11,7 @@ import java.util.HashMap;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Servicio {
+public class Servicio{
     private Persona persona;
 
     HashMap<String,String > hashMap = new HashMap<String, String >();
