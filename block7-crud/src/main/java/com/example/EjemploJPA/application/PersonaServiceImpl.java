@@ -9,7 +9,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PersonaServiceImpl implements PersonaService{
+public class PersonaServiceImpl implements PersonaService {
     @Autowired
     PersonaRepository personaRepository;
 

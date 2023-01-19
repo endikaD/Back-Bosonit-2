@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/persona/")
+@RequestMapping("/persona")
 public class PersonaController {
     @Autowired
     PersonaServiceImpl personaService;
@@ -35,8 +35,8 @@ public class PersonaController {
         }
     }
 
-    @DeleteMapping
-    public ResponseEntity<String> borrarPersonaPorId(@RequestParam int id) {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> borrarPersonaPorId(@PathVariable int id) {
         try {
             personaService.borrarPersonaPorId(id);
             return ResponseEntity.ok().body("Es estudiante con ID: " + id + " ha sido eliminado.");

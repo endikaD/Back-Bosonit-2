@@ -9,6 +9,7 @@ public interface PersonaService {
     PersonaOutputDto actualizarPersona(PersonaInputDto personaInputDto);
 
     PersonaOutputDto obtenerPersonaPorId(int id);
+
     PersonaOutputDto obtenerPersonaPorNombre(String nombre);
 
     Iterable<PersonaOutputDto> obtenerPersonas(int numPag, int tamPag);
