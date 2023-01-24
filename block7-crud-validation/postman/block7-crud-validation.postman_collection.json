@@ -62,14 +62,90 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/persona/2",
+							"raw": "localhost:8080/persona/id/2",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"persona",
+								"id",
 								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Personas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/persona/personas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Persona",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/persona/borrar/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona",
+								"borrar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Persona",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\":\"endikaDV\",\r\n    \"contraseña\":\"ret3\",\r\n    \"nombre\":\"Endikaaaa\",\r\n    \"apellido\":\"Cilla\",\r\n    \"emailCompañia\":\"endikadv@gmail.com\",\r\n    \"emailPersonal\":\"endikadv@gmail.es\",\r\n    \"city\":\"Sestao\",\r\n    \"activo\":\"True\",\r\n    \"fechaCreacion\":\"2023-01-24T09:26:00.176+00:00\",\r\n    \"urlImagen\":\"www.google.com\",\r\n    \"fechaFinalizacion\":\"2023-01-24T09:26:00.176+00:00\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/persona/actualizar/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona",
+								"actualizar",
+								"2"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2",
+									"disabled": true
+								}
 							]
 						}
 					},
