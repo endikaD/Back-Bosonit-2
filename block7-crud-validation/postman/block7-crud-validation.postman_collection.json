@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "70bd08ae-fc16-4169-8501-5f1bfb6c10c6",
+		"name": "block7-crud-validation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20074209"
+	},
+	"item": [
+		{
+			"name": "persona",
+			"item": [
+				{
+					"name": "Añadir Persona",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\":\"endikaDV\",\r\n    \"contraseña\":\"ret3\",\r\n    \"nombre\":\"Endika\",\r\n    \"apellido\":\"Del Valle\",\r\n    \"emailCompañia\":\"endikadv@gmail.com\",\r\n    \"emailPersonal\":\"endikadv@gmail.es\",\r\n    \"city\":\"Sestao\",\r\n    \"activo\":\"True\",\r\n    \"fechaCreacion\":\"2023-01-24T09:26:00.176+00:00\",\r\n    \"urlImagen\":\"www.google.com\",\r\n    \"fechaFinalizacion\":\"2023-01-24T09:26:00.176+00:00\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/persona",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Persona Por Nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/persona/nombre/endikaDV",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona",
+								"nombre",
+								"endikaDV"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Persona Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/persona/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
