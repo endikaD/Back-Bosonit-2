@@ -34,11 +34,8 @@ public class PersonaServiceImpl implements PersonaService {
          */
         if (personaRepository.findByUsuario(personaInputDto.getUsuario()) == null) {
             Persona persona = personaInputDtoToEntity(personaInputDto);
-            persona.setIdPersona(persona.getIdPersona());
-            personaRepository.save(persona);
-
-            PersonaOutputDto personaOutputDto = new PersonaOutputDto(persona);
-            return personaOutputDto;
+            personaRepository.save(persona); //se guarda en repo
+            return new PersonaOutputDto(persona); //se devuelve
         } else {
             throw new EntityNotFoundException("\nNo existe.", 404, LocalDateTime.now());
         }

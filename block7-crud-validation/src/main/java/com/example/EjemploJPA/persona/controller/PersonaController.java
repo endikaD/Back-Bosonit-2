@@ -1,5 +1,6 @@
 package com.example.EjemploJPA.persona.controller;
 
+import com.example.EjemploJPA.persona.application.PersonaService;
 import com.example.EjemploJPA.persona.application.PersonaServiceImpl;
 import com.example.EjemploJPA.persona.controller.dto.input.PersonaInputDto;
 import com.example.EjemploJPA.persona.controller.dto.output.PersonaOutputDto;
@@ -13,7 +14,7 @@ import java.util.List;
 @RequestMapping("/persona")
 public class PersonaController {
     @Autowired
-    PersonaServiceImpl personaService;
+    PersonaService personaService;
 
     @PostMapping
     public PersonaOutputDto añadirPersona(@RequestBody PersonaInputDto personaInputDto) throws Exception {

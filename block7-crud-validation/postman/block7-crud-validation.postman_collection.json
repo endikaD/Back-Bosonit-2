@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"idPersona\":1,\r\n    \"comments\":\"Muy buen profesor\",\r\n    \"branch\":\"Tecnologia\"\r\n}",
+							"raw": "{\r\n    \"idPersona\":2,\r\n    \"comments\":\"Muy buen profesor\",\r\n    \"branch\":\"Tecnologia\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -143,7 +143,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{   \r\n    \"idPersona\":2,\r\n    \"idProfesor\":1,\r\n    \"horasPorSemana\":30,\r\n    \"comentarios\":\"Malo\",\r\n    \"branch\":\"Tecnologia\",\r\n    \"asignaturas\": []\r\n}",
+							"raw": "{   \r\n    \"idPersona\":4,\r\n    \"idProfesor\":1,\r\n    \"horasPorSemana\":30,\r\n    \"comentarios\":\"Malo\",\r\n    \"branch\":\"Tecnologia\",\r\n    \"asignaturas\": []\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -338,7 +338,7 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/asignatura/asignatura?idAsignatura=1&idEstudiante=1",
+							"raw": "localhost:8080/asignatura/asignatura?idAsignatura=1&idEstudiante=2",
 							"host": [
 								"localhost"
 							],
@@ -354,7 +354,7 @@
 								},
 								{
 									"key": "idEstudiante",
-									"value": "1"
+									"value": "2"
 								}
 							]
 						}
@@ -468,7 +468,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"usuario\":\"jiihV\",\r\n    \"contraseña\":\"ret3\",\r\n    \"nombre\":\"Endika\",\r\n    \"apellido\":\"Del Valle\",\r\n    \"emailCompañia\":\"endikadv@gmail.com\",\r\n    \"emailPersonal\":\"endikadv@gmail.es\",\r\n    \"city\":\"Sestao\",\r\n    \"activo\":\"True\",\r\n    \"fechaCreacion\":\"2023-01-24T09:26:00.176+00:00\",\r\n    \"urlImagen\":\"www.google.com\",\r\n    \"fechaFinalizacion\":\"2023-01-24T09:26:00.176+00:00\"\r\n\r\n}",
+							"raw": "{\r\n    \"usuario\":\"cVd\",\r\n    \"contraseña\":\"ret3\",\r\n    \"nombre\":\"Endika\",\r\n    \"apellido\":\"Del Valle\",\r\n    \"emailCompañia\":\"endikadv@gmail.com\",\r\n    \"emailPersonal\":\"endikadv@gmail.es\",\r\n    \"city\":\"Sestao\",\r\n    \"activo\":\"True\",\r\n    \"fechaCreacion\":\"2023-01-24T09:26:00.176+00:00\",\r\n    \"urlImagen\":\"www.google.com\",\r\n    \"fechaFinalizacion\":\"2023-01-24T09:26:00.176+00:00\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
