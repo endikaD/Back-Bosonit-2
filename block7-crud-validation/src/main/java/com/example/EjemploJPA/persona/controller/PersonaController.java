@@ -1,12 +1,15 @@
 package com.example.EjemploJPA.persona.controller;
 
+import com.example.EjemploJPA.feign.Feign;
 import com.example.EjemploJPA.persona.application.PersonaService;
-import com.example.EjemploJPA.persona.application.PersonaServiceImpl;
 import com.example.EjemploJPA.persona.controller.dto.input.PersonaInputDto;
 import com.example.EjemploJPA.persona.controller.dto.output.PersonaOutputDto;
 import com.example.EjemploJPA.exceptions.EntityNotFoundException;
+import com.example.EjemploJPA.profesor.controller.dto.output.ProfesorOutputDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -15,6 +18,8 @@ import java.util.List;
 public class PersonaController {
     @Autowired
     PersonaService personaService;
+    @Autowired
+    Feign feign;
 
     @PostMapping
     public PersonaOutputDto añadirPersona(@RequestBody PersonaInputDto personaInputDto) throws Exception {
@@ -45,4 +50,15 @@ public class PersonaController {
         return personaService.actualizarPersona(id, personaInputDto);
     }
 
+    @GetMapping("/profesor/{id}")
+    ResponseEntity<ProfesorOutputDto> getProfesorRestTemplate(@PathVariable Integer id){
+        ResponseEntity<ProfesorOutputDto> rs = new RestTemplate().getForEntity("http://localhost:8081/profesor/"+id,ProfesorOutputDto.class);
+        return ResponseEntity.ok(rs.getBody());
+    }
+
+    @GetMapping("/feing/{id}")
+    ResponseEntity<ProfesorOutputDto> getProfesorFeign(@PathVariable Integer id){
+        ResponseEntity<ProfesorOutputDto> rs = feign.callServer(id);
+        return rs;
+    }
 }
