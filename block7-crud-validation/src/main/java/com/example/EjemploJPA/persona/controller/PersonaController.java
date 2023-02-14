@@ -52,7 +52,7 @@ public class PersonaController {
 
     @GetMapping("/profesor/{id}")
     ResponseEntity<ProfesorOutputDto> getProfesorRestTemplate(@PathVariable Integer id){
-        ResponseEntity<ProfesorOutputDto> rs = new RestTemplate().getForEntity("http://localhost:8081/profesor/"+id,ProfesorOutputDto.class);
+        ResponseEntity<ProfesorOutputDto> rs = new RestTemplate().getForEntity("http://localhost:8080/profesor/"+id,ProfesorOutputDto.class);
         return ResponseEntity.ok(rs.getBody());
     }
 
