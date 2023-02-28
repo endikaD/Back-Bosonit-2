@@ -1,10 +1,10 @@
-package com.example.EjemploJPA;
+package net.techtter.springkafkadocker.springkafkadockerint;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EjemploJpaApplicationTests {
+class SpringKafkaDockerIntApplicationTests {
 
 	@Test
 	void contextLoads() {
