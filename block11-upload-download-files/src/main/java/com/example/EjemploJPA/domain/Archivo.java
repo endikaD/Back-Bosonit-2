@@ -20,7 +20,7 @@ public class Archivo {
     private Integer id; //get
     private String nombre; //get
     private Date fechaSubida;
-    private String type; //get
+    private String type;
     @Lob
     private byte[] fileData;
 }
