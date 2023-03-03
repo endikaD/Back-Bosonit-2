@@ -102,7 +102,6 @@ public class EstudianteServiceImpl implements EstudianteService{
         estudiante.setHorasPorSemana(estudianteInputDto.getHorasPorSemana());
         estudiante.setComentarios(estudianteInputDto.getComentarios());
         estudiante.setBranch(estudianteInputDto.getBranch());
-
         if (estudianteInputDto.getAsignaturas()!=null)
         {
             List<Asignatura> asignaturas=new ArrayList<>();
