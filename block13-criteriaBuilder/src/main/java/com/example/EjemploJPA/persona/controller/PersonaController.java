@@ -29,7 +29,7 @@ public class PersonaController {
     @Autowired
     EntityManager em; //Autowired del EntityManager
 
-    public static final String GREATER_THAN="greater";  //Variables estáticas 
+    public static final String GREATER_THAN="greater";  //Variables estáticas
     public static final String LESS_THAN="less";
     public static final String EQUAL="equal";
     @Autowired

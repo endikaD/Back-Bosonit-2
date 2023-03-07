@@ -31,9 +31,11 @@ public class PersonaRepositoryImpl { //Obligatorio que el nombre de la clase sea
             {
                 case "usuario":
                     predicates.add(cb.like(root.get(field),"%"+(String)value+"%"));
+                    query.orderBy(cb.asc(root.get("usuario")));
                     break;
                 case "nombre":
                     predicates.add(cb.like(root.get(field),"%"+(String)value+"%"));
+                    query.orderBy(cb.asc(root.get("nombre")));
                     break;
                 case "apellido":
                     predicates.add(cb.like(root.get(field),"%"+(String)value+"%"));
